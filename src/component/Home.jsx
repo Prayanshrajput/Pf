@@ -23,7 +23,7 @@ useEffect(()=>{
 },[count])
 
   return (
-    <div className=" mt-[100px] flex  w-screen   h-1/2 border border-sky-500 ">
+    <div id='home' className=" mt-[100px] flex  w-screen   h-1/2 border border-sky-500 ">
       <div className="flex justify-center  flex-col w-3/2 h-1/2 mt-10 border border-sky-500 ">
         <h1 className="font-extrabold text-[40px]"> PRAYANSH RAJPUT</h1>
         <h2 className="font-extrabold text-xl">{Occupation||"MERN"}</h2>

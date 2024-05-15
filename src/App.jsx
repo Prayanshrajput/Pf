@@ -55,13 +55,14 @@ let myimage="src/assets/backgound.jpg"
 
 
   return (
-     <Scrollbar style={{ width: 1450, height: 1250 }}>
+     <Scrollbar style={{ width: 1450, height: 10000 }}>
  
    
-    <div className="  bg-cover bg-center overflow-hidden h-screen bg-[url('D:\React_class\my\src\assets\pierre-chatel-innocenti-pxoZSTdAzeU-unsplash.jpg')]   ">
+    <div className="  bg-cover bg-center overflow-hidden h-auto bg-[url('src\assets\pierre-chatel-innocenti-pxoZSTdAzeU-unsplash.jpg')]   ">
 {/* <img className="w-screen h-screen" src="src/assets/backgound.jpg" alt="" /> */}
     
     <Navbar></Navbar>
+    
 
   
 
@@ -71,16 +72,24 @@ let myimage="src/assets/backgound.jpg"
     
 
 
-   <Routes>
+   {/* <Routes>
 
    <Route path='/' element={<Home></Home>}></Route>
     <Route path='/project' element={<Project></Project>}></Route>
     <Route path='/about' element={ <About></About>}></Route>
     <Route path='/contect' element={<Contect></Contect>}></Route>
    
-  </Routes>
+  </Routes> */}
+
+<Home></Home>
+    <About></About>
+    <Contect></Contect>
+    <Project></Project>
+
     </div>
     
+    
+
      </Scrollbar>
   );
 }

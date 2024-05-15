@@ -2,7 +2,7 @@ import React from 'react'
 import '../All.css'
 export const Contect = () => {
   return (
-   <div>
+   <div id='contect'>
     <label htmlFor="">Enter your main</label>
     <br />
     <input type="gmail" />
