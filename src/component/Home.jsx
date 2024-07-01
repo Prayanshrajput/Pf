@@ -31,7 +31,7 @@ useEffect(()=>{
   return (
    <div className="flex ">
 
-     <div id='home' className=" flex flex-wrap justify-center items-center  flex-col h border border-white w-screen h-screen bg-black">
+     <div id='home' className=" flex flex-wrap justify-center items-center  flex-col h border border-white w-screen h-screen bg-white">
 
 <div className="flex  rounded-full w-[250px] h-[250px] max-w-[300px] max-h-[300px]  mt-10 border border-black ">
       <img src="src\assets\prayansh.png" className="  rounded-full w-cover h-cover  " alt="" />
