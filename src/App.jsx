@@ -9,88 +9,50 @@ import { About } from './component/About';
 import { Contect } from './component/Contect';
 import { Home } from './component/Home';
 import { Scrollbar } from 'react-scrollbars-custom';
+import { Listfornav } from './component/Listfornav';
 
 
 function App() {
 
-  const name = "Prayansh singh Rajput";
-  let [char, setChar] = useState(name);
-  let [reverse, setReverse] = useState(true);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      if (reverse) {
-        setChar(prevChar => prevChar.slice(0, -1)); // remove the last character
-      } 
-    }, 500);
-
-    // Clean up the interval on unmount
-    return () => clearInterval(interval);
-  }, [reverse]);
-
-  useEffect(() => {
-    // Toggle reverse state when char length reaches 0 or name length
-    if (char.length === 0 || char.length===name.length) {
-      setReverse(prevReverse => !prevReverse);
-    }
-  }, [char]);
-
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      if (!reverse) {
-        // If not reversing, gradually reveal the full name
-        let tem = name.substring(0, char.length + 1);
-        setChar(tem);
-      }
-    }, 500);
-  
-    // Clean up the interval when the component unmounts or when `reverse` becomes `true`
-    return () => clearInterval(interval);
-  }, [reverse, char, name]);
-  
-
-  
-let myimage="src/assets/backgound.jpg"
+  const [viewportWidth, setViewportWidth] = useState(window.innerWidth);
+  const [viewportHeight, setViewportHeight] = useState(2500);
 
 
   return (
-     <Scrollbar style={{ width: 1450, height: 10000 }}>
+//      <Scrollbar className=" bg-[url('Pf/src/assets/try.png')] overflow-x-hidden" style={{ width: viewportWidth, height:viewportHeight }}>
  
    
-    <div className="  bg-cover bg-center overflow-hidden h-auto bg-[url('src\assets\pierre-chatel-innocenti-pxoZSTdAzeU-unsplash.jpg')]   ">
-{/* <img className="w-screen h-screen" src="src/assets/backgound.jpg" alt="" /> */}
+//     <div>
+// {/* <img className="w-screen h-screen" src="src/assets/backgound.jpg" alt="" /> */}
     
-    <Navbar></Navbar>
-    
+//     <Navbar></Navbar>
+//    {/* <Routes>
 
-  
-
-   <div className="bg-transparent flex justify-center font-bold text-zinc-50">
-   <h1 >{char||"Software Developer"}</h1>
-   </div>
-    
-
-
-   {/* <Routes>
-
-   <Route path='/' element={<Home></Home>}></Route>
-    <Route path='/project' element={<Project></Project>}></Route>
-    <Route path='/about' element={ <About></About>}></Route>
-    <Route path='/contect' element={<Contect></Contect>}></Route>
+//    <Route path='/' element={<Home></Home>}></Route>
+//     <Route path='/project' element={<Project></Project>}></Route>
+//     <Route path='/about' element={ <About></About>}></Route>
+//     <Route path='/contect' element={<Contect></Contect>}></Route>
    
-  </Routes> */}
+//   </Routes> */}
 
-<Home></Home>
-    <About></About>
-    <Contect></Contect>
+//      <Home  ></Home>
+//     <About></About>
+//     <Contect></Contect>
+//     <Project></Project>
+
+//     </div>
+    
+    
+
+//      </Scrollbar>
+ <div className="flex flex-col ">
+    <Navbar></Navbar>
+    <Home  ></Home>
+     <About></About>
+   <Contect></Contect>
     <Project></Project>
+ </div>
 
-    </div>
-    
-    
-
-     </Scrollbar>
   );
 }
 
